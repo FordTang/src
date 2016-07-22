@@ -7,6 +7,11 @@ public class MainApp {
 	public static void main(String[] args) {
 		ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
 		
+		TextEditor te = (TextEditor) context.getBean("textEditor");
+
+		te.spellCheck();
+		
+		/*
 		HelloWorld objA = (HelloWorld) context.getBean("helloWorld");
 		
 		objA.getMessage1();
@@ -17,6 +22,7 @@ public class MainApp {
 		objB.getMessage2();
 		objB.getMessage3();
 
-		//context.registerShutdownHook();
+		context.registerShutdownHook();
+		*/
 	}
 }
